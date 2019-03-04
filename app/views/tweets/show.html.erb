@@ -1,8 +1,16 @@
 <h1>口コミ投稿</h1>
 <h3>投稿詳細</h3>
 <div class="tweet">
-  <p><%= @tweet.body %></p>
-  <p><%= @tweet.created_at %></p>
+  <h8>学部 :</h8><%= @tweet.department %>
+   <br><h8>学科 :</h8><%= @tweet.subject %>
+    <br><h8>研究室 :</h8><%= @tweet.laboratory %>
+     <br><h8>分野 :</h8><%= @tweet.field %>
+      <br><h8>満足度 :</h8><%= @tweet.star %>
+       <br><h8>コアタイム :</h8><%= @tweet.coretime %>
+        <br><h8>コメント :</h8><%= @tweet.body %>
+         <br><h8>投稿日時 :</h8><%= @tweet.created_at %>
+  <p><!%= @tweet.body %></p>
+  <p><!%= @tweet.created_at %></p>
 </div>
   <%= link_to "編集する", edit_tweet_path(@tweet.id) %>
   <%= link_to "投稿一覧に戻る", tweets_path %>

@@ -4,9 +4,14 @@
 <div class="tweets-container">
   <% @tweets.each do |t| %>
     <div class="tweet">
-      <%= t.body %>
-       <br>
-      <%= t.created_at %>
+      <h8>学部 :</h8><%= t.department %>
+       <br><h8>学科 :</h8><%= t.subject %>
+        <br><h8>研究室 :</h8><%= t.laboratory %>
+         <br><h8>分野 :</h8><%= t.field %>
+          <br><h8>満足度 :</h8><%= t.star %>
+           <br><h8>コアタイム :</h8><%= t.coretime %>
+            <br><h8>コメント :</h8><%= t.body %>
+             <br><h8>投稿日時 :</h8><%= t.created_at %>
 
       <%= link_to "詳細へ", tweet_path(t.id) %>
       <%= link_to "削除する", tweet_path(t.id), method: :delete %>
