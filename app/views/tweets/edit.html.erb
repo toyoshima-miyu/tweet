@@ -1,0 +1,17 @@
+<%= form_for @tweet do |f| %>
+<%= f.label :department, "学部名" %>
+<%= f.text_field :department, :size => 50 %>
+<br>  <%= f.label :subject, "学科名" %>
+<%= f.text_field :subject, :size => 50 %>
+<br>  <%= f.label :laboratory, "研究室名" %>
+<%= f.text_field :laboratory, :size => 50 %>
+<br>  <%= f.label :field, "分野名" %>
+<%= f.text_field :field, :size => 50 %>
+<br>  <%= f.label :star, "満足度（５段階評価）" %>
+<%= f.text_field :star, :size => 50 %>
+<br>  <%= f.label :coretime, "コアタイム" %>
+<%= f.text_field :coretime, :size => 50 %>
+<br>  <%= f.label :body, "コメント" %>
+  <%= f.text_field :body, :size => 100 %>
+<br>  <%= f.submit "編集する" %>
+<% end %>
